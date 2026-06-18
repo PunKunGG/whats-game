@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="th">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +8,20 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
-<body data-return-on-refresh="true">
+<body data-return-on-refresh="true" data-i18n-title="catTitle">
   <div class="glow glow-one" aria-hidden="true"></div>
   <div class="glow glow-two" aria-hidden="true"></div>
 
   <main class="page-shell">
     <section class="card card--compact cat-card" aria-labelledby="page-title" data-file-label="EASTER_EGG // CAT">
+      <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language to English">EN ↔ TH</button>
       <p class="cat-face" aria-hidden="true">^•ﻌ•^</p>
-      <p class="eyebrow">Easter egg ที่เจอได้เฉยเลย</p>
-      <h1 id="page-title">แมวพบคุณแล้ว</h1>
-      <p class="subtitle">คุณไม่ใช่ชื่อที่ประตูตามหา แต่เป็นชื่อที่แมวอนุมัติ</p>
-      <p class="microcopy microcopy--spaced">รางวัลคือการได้รู้ว่าเว็บนี้มีงบสำหรับแมวหนึ่งตัว</p>
+      <p class="eyebrow" data-i18n="catEyebrow">Easter egg ที่เจอได้เฉยเลย</p>
+      <h1 id="page-title" data-i18n="catHeading">แมวพบคุณแล้ว</h1>
+      <p class="subtitle" data-i18n="catSubtitle">คุณไม่ใช่ชื่อที่ประตูตามหา แต่เป็นชื่อที่แมวอนุมัติ</p>
+      <p class="microcopy microcopy--spaced" data-i18n="catMicrocopy">รางวัลคือการได้รู้ว่าเว็บนี้มีงบสำหรับแมวหนึ่งตัว</p>
       <div class="button-group">
-        <a class="button button--secondary" href="index.html">กลับไปลองใหม่</a>
+        <a class="button button--secondary" href="index.html" data-home-link data-i18n="tryAgainButton">กลับไปลองใหม่</a>
       </div>
     </section>
   </main>

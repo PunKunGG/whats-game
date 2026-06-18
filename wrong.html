@@ -1,29 +1,62 @@
 <!doctype html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0d0b1d">
-  <title>ปฏิเสธการเข้าใช้ | Not a DM</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
-</head>
-<body data-return-on-refresh="true">
-  <div class="glow glow-one glow-one--warning" aria-hidden="true"></div>
-  <div class="glow glow-two" aria-hidden="true"></div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d0b1d" />
+    <title>ปฏิเสธการเข้าใช้ | Not a DM</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body data-return-on-refresh="true" data-i18n-title="wrongTitle">
+    <div class="glow glow-one glow-one--warning" aria-hidden="true"></div>
+    <div class="glow glow-two" aria-hidden="true"></div>
 
-  <main class="page-shell">
-    <section class="card card--compact" aria-labelledby="page-title" data-file-label="ACCESS_LOG // DENIED">
-      <p class="eyebrow">หักมุมแล้วหนึ่ง</p>
-      <h1 id="page-title">เข้าไม่ได้จ้า</h1>
-      <p class="subtitle">เหตุผล: คุณไม่ใช่เจ้าของชื่อนั้นสินะ 🤔</p>
-      <p class="microcopy microcopy--spaced">สภาลับพิจารณาคำขอของคุณแล้ว ผลโหวตคือไม่อนุมัติครับ</p>
+    <main class="page-shell">
+      <section
+        class="card card--compact"
+        aria-labelledby="page-title"
+        data-file-label="ACCESS_LOG // DENIED"
+      >
+        <button
+          class="language-toggle"
+          type="button"
+          data-language-toggle
+          aria-label="Switch language to English"
+        >
+          EN ↔ TH
+        </button>
+        <p class="eyebrow" data-i18n="wrongEyebrow">หักมุมแล้วหนึ่ง</p>
+        <h1 id="page-title" data-i18n="wrongHeading">เข้าไม่ได้จ้า</h1>
+        <p class="subtitle" data-i18n="wrongSubtitle">
+          เหตุผล: คุณไม่ใช่เจ้าของชื่อนั้นสินะ 🤔
+        </p>
+        <p class="microcopy microcopy--spaced" data-i18n="wrongMicrocopy">
+          สภาลับพิจารณาคำขอของคุณแล้ว ผลโหวตคือไม่อนุมัติครับ
+        </p>
 
-      <div class="button-group" aria-label="ตัวเลือกถัดไป">
-        <a class="button button--primary" href="https://www.youtube.com/watch?v=iZmqhQ8myGY" target="_blank" rel="noopener noreferrer">ยอมรับชะตากรรม</a>
-        <a class="button button--secondary" href="index.html">ลองชื่ออื่น</a>
-      </div>
-    </section>
-  </main>
-</body>
+        <div
+          class="button-group"
+          data-i18n-aria-label="nextOptionsLabel"
+          aria-label="ตัวเลือกถัดไป"
+        >
+          <a
+            class="button button--primary"
+            href="https://www.youtube.com/watch?v=Yfu6G3f8Xxc"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="acceptFateButton"
+            >ยอมรับชะตากรรม</a
+          >
+          <a
+            class="button button--secondary"
+            href="index.html"
+            data-home-link
+            data-i18n="tryAnotherButton"
+            >ลองชื่ออื่น</a
+          >
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

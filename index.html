@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="th">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +8,37 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
-<body>
+<body data-i18n-title="indexTitle">
   <div class="glow glow-one" aria-hidden="true"></div>
   <div class="glow glow-two" aria-hidden="true"></div>
 
   <main class="page-shell">
     <section class="card card--compact" aria-labelledby="page-title" data-file-label="ACCESS_GATE // 01">
-      <button class="collectible" type="button" data-collectible="gate" aria-label="เก็บดาวลับหน้าแรก" aria-pressed="false">✦</button>
-      <p class="eyebrow">เกมลับเล็ก ๆ</p>
+      <button class="language-toggle" id="language-toggle" type="button" data-language-toggle aria-label="Switch language to English">EN ↔ TH</button>
+      <button class="collectible" type="button" data-collectible="gate" data-i18n-aria-label="gateCollectibleLabel" aria-label="เก็บดาวลับหน้าแรก" aria-pressed="false">✦</button>
+      <p class="eyebrow" data-i18n="eyebrow">เกมลับเล็ก ๆ</p>
       <h1 id="page-title">Not a DM</h1>
-      <p class="subtitle">กรอกชื่อเพื่อไปต่อ</p>
+      <p class="subtitle" data-i18n="subtitle">กรอกชื่อเพื่อไปต่อ</p>
 
       <form class="name-form" id="name-form" novalidate>
-        <label for="player-name">ชื่อของคุณ</label>
+        <label for="player-name" data-i18n="nameLabel">ชื่อของคุณ</label>
         <input
           id="player-name"
           name="playerName"
           type="text"
           autocomplete="name"
           placeholder="พิมพ์ชื่อที่คุณชอบ..หรือจะเป็นชื่อที่ผมชอบดีน้า..😜"
+          data-i18n-placeholder="namePlaceholder"
           required
         >
-        <button class="button button--primary" type="submit">เริ่มเกม</button>
+        <button class="button button--primary" type="submit" data-i18n="startButton">เริ่มเกม</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
 
-      <p class="microcopy">ประตูบางบานจะเปิดให้ผู้เล่นที่ใช่เท่านั้น</p>
+      <p class="microcopy" data-i18n="microcopy">ประตูบางบานจะเปิดให้ผู้เล่นที่ใช่เท่านั้น</p>
       <p class="collectible-status" data-collectible-status role="status" aria-live="polite"></p>
     </section>
   </main>
+
 </body>
 </html>

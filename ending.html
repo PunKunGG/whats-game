@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="th">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,30 +8,31 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
-<body data-return-on-refresh="true">
+<body data-return-on-refresh="true" data-i18n-title="endingTitle">
   <div class="glow glow-one" aria-hidden="true"></div>
   <div class="glow glow-two glow-two--bright" aria-hidden="true"></div>
 
   <main class="page-shell">
     <section class="card card--compact" aria-labelledby="page-title" data-file-label="RESULT_ARCHIVE // 03">
-      <button class="collectible collectible--ending" type="button" data-collectible="finale" aria-label="เก็บดาวลับหน้าสุดท้าย" aria-pressed="false">✦</button>
-      <p class="eyebrow">ภารกิจสำเร็จ ✦</p>
-      <h1 id="page-title">ผลลัพธ์: 100%</h1>
-      <p class="result-status">สถานะ: เป็นคนที่ใช่อย่างแน่นอน</p>
+      <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language to English">EN ↔ TH</button>
+      <button class="collectible collectible--ending" type="button" data-collectible="finale" data-i18n-aria-label="finaleCollectibleLabel" aria-label="เก็บดาวลับหน้าสุดท้าย" aria-pressed="false">✦</button>
+      <p class="eyebrow" data-i18n="endingEyebrow">ภารกิจสำเร็จ ✦</p>
+      <h1 id="page-title" data-i18n="endingHeading">ผลลัพธ์: 100%</h1>
+      <p class="result-status" data-i18n="endingStatus">สถานะ: เป็นคนที่ใช่อย่างแน่นอน</p>
       <p class="result-title" id="result-title"></p>
       <p class="personality-summary" id="personality-summary"></p>
 
-      <div class="letter" aria-label="ข้อความสุดท้าย">
+      <div class="letter" data-i18n-aria-label="finalMessageLabel" aria-label="ข้อความสุดท้าย">
         <p class="final-message" id="typed-message"></p>
         <p class="player-note" id="player-note" hidden></p>
       </div>
 
-      <p class="microcopy">เป็นความพยายามในระดับที่สมเหตุสมผลมาก แน่นอนอยู่แล้ว</p>
+      <p class="microcopy" data-i18n="endingMicrocopy">เป็นความพยายามในระดับที่สมเหตุสมผลมาก แน่นอนอยู่แล้ว</p>
       <p class="collectible-status" data-collectible-status role="status" aria-live="polite"></p>
-      <p class="secret-reward" id="secret-reward" hidden>เก็บดาวครบแล้ว ✦ ข้อความลับคือ: คนทำเว็บตั้งใจให้คุณยิ้มจริง ๆ นะ</p>
+      <p class="secret-reward" id="secret-reward" data-i18n="secretReward" hidden>เก็บดาวครบแล้ว ✦ ข้อความลับคือ: คนทำเว็บตั้งใจให้คุณยิ้มจริง ๆ นะ</p>
 
       <div class="button-group">
-        <button class="button button--primary" id="song-button" type="button" data-song-url="https://www.youtube.com/watch?v=pk4q4-U891E">เปิดเพลงสุดท้าย</button>
+        <button class="button button--primary" id="song-button" type="button" data-song-url="https://www.youtube.com/watch?v=pk4q4-U891E" data-i18n="finalSongButton">เปิดเพลงสุดท้าย</button>
       </div>
       <p class="countdown" id="song-countdown" role="status" aria-live="polite"></p>
     </section>
