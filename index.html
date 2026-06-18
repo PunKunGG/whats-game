@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d0b1d">
+  <title>Not a DM | เกมลับเล็ก ๆ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <div class="glow glow-one" aria-hidden="true"></div>
+  <div class="glow glow-two" aria-hidden="true"></div>
+
+  <main class="page-shell">
+    <section class="card card--compact" aria-labelledby="page-title">
+      <p class="eyebrow">เกมลับเล็ก ๆ</p>
+      <h1 id="page-title">Not a DM</h1>
+      <p class="subtitle">กรอกชื่อเพื่อไปต่อ</p>
+
+      <form class="name-form" id="name-form" novalidate>
+        <label for="player-name">ชื่อของคุณ</label>
+        <input
+          id="player-name"
+          name="playerName"
+          type="text"
+          autocomplete="name"
+          placeholder="พิมพ์ชื่อที่คุณชอบ..หรือจะเป็นชื่อที่ผมชอบดีน้า..😜"
+          required
+        >
+        <button class="button button--primary" type="submit">เริ่มเกม</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="microcopy">ประตูบางบานจะเปิดให้ผู้เล่นที่ใช่เท่านั้น</p>
+    </section>
+  </main>
+</body>
+</html>
