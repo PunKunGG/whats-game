@@ -39,6 +39,8 @@
 
 ## โครงสร้างโปรเจกต์
 
+`css/style.css` เป็น entry point ที่รวม stylesheet ย่อยตามหน้าที่ ส่วน JavaScript ต้องโหลดตามลำดับ `core` → `translations` → `audio` → `pages` → `effects` → `main` โดย `main.js` ทำหน้าที่เริ่มระบบเท่านั้น
+
 ```text
 whats-game/
 ├─ index.html
@@ -48,8 +50,18 @@ whats-game/
 ├─ cat.html
 ├─ dog.html
 ├─ css/
-│  └─ style.css
+│  ├─ style.css
+│  ├─ foundation.css
+│  ├─ components.css
+│  ├─ game.css
+│  ├─ effects.css
+│  └─ responsive.css
 ├─ js/
+│  ├─ core.js
+│  ├─ translations.js
+│  ├─ audio.js
+│  ├─ pages.js
+│  ├─ effects.js
 │  └─ main.js
 ├─ assets/
 └─ README.md
