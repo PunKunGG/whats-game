@@ -1,27 +1,17 @@
 const allowedNames = [
-  "rinlada",
-  "wanrada",
-  "siwapad",
-  "puntita",
   "nice",
   "dream",
   "pun",
   "punkung",
   "punch",
-  "รินลดา",
-  "วรรณรดา",
-  "ศิวภาส",
   "ไนซ์",
   "ดรีม",
   "ปั้น",
-  "ปั้นคุง",
   "พั้นคุง",
   "พั้น",
 ];
 const collectibleIds = ["gate", "route", "finale"];
-const initialLanguage = new URLSearchParams(window.location.search).get(
-  "lang",
-);
+const initialLanguage = new URLSearchParams(window.location.search).get("lang");
 let currentLanguage = initialLanguage === "th" ? "th" : "en";
 const temporaryStatuses = new Map();
 
@@ -82,11 +72,9 @@ function setupLanguageToggle() {
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       element.textContent = text(element.dataset.i18n);
     });
-    document
-      .querySelectorAll("[data-i18n-placeholder]")
-      .forEach((element) => {
-        element.placeholder = text(element.dataset.i18nPlaceholder);
-      });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+      element.placeholder = text(element.dataset.i18nPlaceholder);
+    });
     document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
       element.setAttribute("aria-label", text(element.dataset.i18nAriaLabel));
     });
