@@ -1,0 +1,63 @@
+:root {
+  color-scheme: dark;
+  --background: #070913;
+  --surface: rgba(15, 17, 32, 0.9);
+  --surface-strong: #171a30;
+  --text: #faf7ff;
+  --muted: #c0bad0;
+  --pink: #f3a6c8;
+  --pink-bright: #ffc1dc;
+  --purple: #a88df0;
+  --line: rgba(185, 162, 255, 0.14);
+  --border: rgba(204, 193, 255, 0.24);
+  --shadow: 0 28px 90px rgba(0, 0, 0, 0.52), 8px 8px 0 rgba(9, 7, 20, 0.72);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(135, 88, 170, 0.24) 0, transparent 36%),
+    radial-gradient(circle at 100% 80%, rgba(75, 67, 140, 0.18) 0, transparent 34%),
+    linear-gradient(145deg, #070913 0%, #0d0b19 58%, #060710 100%);
+  font-family: "Segoe UI", Tahoma, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 42px 42px;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.68), transparent 88%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.68), transparent 88%);
+  content: "";
+  pointer-events: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-shell {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: clamp(1rem, 4vw, 3rem);
+}

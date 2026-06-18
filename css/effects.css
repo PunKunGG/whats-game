@@ -1,0 +1,75 @@
+.trail-particle {
+  position: fixed;
+  z-index: 5;
+  pointer-events: none;
+  color: var(--pink-bright);
+  font-size: 0.72rem;
+  text-shadow: 0 0 8px var(--pink);
+  transform: translate(-50%, -50%);
+  animation: trail-fade 700ms ease-out forwards;
+}
+
+.glow {
+  position: fixed;
+  border-radius: 18%;
+  filter: blur(18px);
+  opacity: 0.32;
+  pointer-events: none;
+  animation: float-glow 9s ease-in-out infinite alternate;
+}
+
+.glow-one {
+  top: 8%;
+  left: 8%;
+  width: min(34vw, 22rem);
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(228, 121, 181, 0.42), transparent 68%);
+}
+
+.glow-two {
+  right: 6%;
+  bottom: 5%;
+  width: min(40vw, 28rem);
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgba(130, 105, 226, 0.4), transparent 68%);
+  animation-delay: -4s;
+}
+
+.glow-one--warning {
+  background: radial-gradient(circle, rgba(218, 104, 131, 0.38), transparent 68%);
+}
+
+.glow-two--bright {
+  opacity: 0.65;
+}
+
+@keyframes card-arrival {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes float-glow {
+  from {
+    transform: translate3d(-1rem, 0, 0) scale(0.95);
+  }
+  to {
+    transform: translate3d(1.5rem, -1.25rem, 0) scale(1.08);
+  }
+}
+
+@keyframes trail-fade {
+  from {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -140%) scale(0.35) rotate(25deg);
+  }
+}

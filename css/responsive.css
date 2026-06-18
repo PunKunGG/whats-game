@@ -1,0 +1,143 @@
+@media (max-width: 37rem) {
+  body::before {
+    background-size: 30px 30px;
+    opacity: 0.65;
+  }
+
+  .page-shell {
+    place-items: center;
+    padding:
+      max(0.75rem, env(safe-area-inset-top))
+      max(0.75rem, env(safe-area-inset-right))
+      max(0.75rem, env(safe-area-inset-bottom))
+      max(0.75rem, env(safe-area-inset-left));
+  }
+
+  .card {
+    padding: 3.35rem 1rem 1.35rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.48), 4px 4px 0 rgba(9, 7, 20, 0.72);
+  }
+
+  .card::before {
+    max-width: calc(100% - 3.7rem);
+    overflow: hidden;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .language-toggle {
+    left: auto;
+    right: 3rem;
+    font-size: 0.64rem;
+  }
+
+  .sound-toggle {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 10vw, 2.7rem);
+  }
+
+  .subtitle {
+    font-size: 0.98rem;
+  }
+
+  .name-form,
+  .quiz {
+    margin-top: 1.5rem;
+  }
+
+  .name-form input,
+  .quiz__text-input,
+  .button {
+    min-height: 3rem;
+  }
+
+  .quiz__header {
+    display: block;
+  }
+
+  .quiz__hint {
+    display: block;
+    margin-top: 0.15rem;
+  }
+
+  .quiz__answers {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz__answer {
+    min-height: 3.65rem;
+    padding: 0.75rem;
+  }
+
+  .quiz__question {
+    min-height: auto;
+  }
+
+  .runaway-button.has-escaped {
+    transform: translateX(2rem) rotate(3deg);
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group .button {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .letter {
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+  }
+
+  .final-message {
+    min-height: 5.5rem;
+  }
+}
+
+@media (max-width: 22rem) {
+  .card {
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .answer-letter {
+    width: 1.75rem;
+    margin-right: 0.3rem;
+  }
+
+  .runaway-button.has-escaped {
+    transform: translateX(1rem) rotate(3deg);
+  }
+}
+
+@media (hover: none) {
+  .button:hover,
+  .quiz__answer:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
