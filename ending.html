@@ -13,16 +13,27 @@
   <div class="glow glow-two glow-two--bright" aria-hidden="true"></div>
 
   <main class="page-shell">
-    <section class="card card--compact" aria-labelledby="page-title">
+    <section class="card card--compact" aria-labelledby="page-title" data-file-label="RESULT_ARCHIVE // 03">
+      <button class="collectible collectible--ending" type="button" data-collectible="finale" aria-label="เก็บดาวลับหน้าสุดท้าย" aria-pressed="false">✦</button>
       <p class="eyebrow">ภารกิจสำเร็จ ✦</p>
       <h1 id="page-title">ผลลัพธ์: 100%</h1>
       <p class="result-status">สถานะ: เป็นคนที่ใช่อย่างแน่นอน</p>
-      <p class="final-message">ไม่อยากส่งข้อความนี้ไปตรง ๆ ในแชต ก็เลยทำเว็บไซต์เล็ก ๆ ขึ้นมาแทน</p>
+      <p class="result-title" id="result-title"></p>
+      <p class="personality-summary" id="personality-summary"></p>
+
+      <div class="letter" aria-label="ข้อความสุดท้าย">
+        <p class="final-message" id="typed-message"></p>
+        <p class="player-note" id="player-note" hidden></p>
+      </div>
+
       <p class="microcopy">เป็นความพยายามในระดับที่สมเหตุสมผลมาก แน่นอนอยู่แล้ว</p>
+      <p class="collectible-status" data-collectible-status role="status" aria-live="polite"></p>
+      <p class="secret-reward" id="secret-reward" hidden>เก็บดาวครบแล้ว ✦ ข้อความลับคือ: คนทำเว็บตั้งใจให้คุณยิ้มจริง ๆ นะ</p>
 
       <div class="button-group">
-        <a class="button button--primary" href="https://www.youtube.com/watch?v=pk4q4-U891E" target="_blank" rel="noopener noreferrer">เปิดเพลงสุดท้าย</a>
+        <button class="button button--primary" id="song-button" type="button" data-song-url="https://www.youtube.com/watch?v=pk4q4-U891E">เปิดเพลงสุดท้าย</button>
       </div>
+      <p class="countdown" id="song-countdown" role="status" aria-live="polite"></p>
     </section>
   </main>
 </body>
